@@ -1,0 +1,10 @@
+# compiled output
+library
+library.exe
+*.o
+*.out
+# runtime data
+books.txt
+# editor files
+.vscode/
+.idea/

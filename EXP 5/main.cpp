@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+class Shape {
+public:
+    virtual void area() = 0;
+};
+
+class Circle : public Shape {
+public:
+    void area() {
+        cout << "Area of Circle: "
+             << 3.14 * 5 * 5 << endl;
+    }
+};
+
+class Rectangle : public Shape {
+public:
+    void area() {
+        cout << "Area of Rectangle: "
+             << 10 * 5 << endl;
+    }
+};
+
+class Triangle : public Shape {
+public:
+    void area() {
+        cout << "Area of Triangle: "
+             << 0.5 * 10 * 5 << endl;
+    }
+};
+
+int main() {
+    Circle c;
+    Rectangle r;
+    Triangle t;
+
+    Shape *s;
+
+    s = &c;
+    s->area();
+
+    s = &r;
+    s->area();
+
+    s = &t;
+    s->area();
+
+    return 0;
+}
